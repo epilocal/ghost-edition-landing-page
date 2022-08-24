@@ -41,11 +41,6 @@ function cover() {
     imagesLoaded(cover, function () {
         cover.classList.remove('image-loading');
     });
-
-    document.querySelector('.cover-arrow').addEventListener('click', function () {
-        var element = cover.nextElementSibling;
-        element.scrollIntoView({behavior: 'smooth', block: 'start'});
-    });
 }
 
 function subMenu() {

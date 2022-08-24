@@ -27,7 +27,6 @@
                     {{/if}}
                 </a>
             </div>
-            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
             <button class="gh-burger"></button>
         </div>
 
@@ -36,7 +35,6 @@
         </nav>
 
         <div class="gh-head-actions">
-            <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
             <div class="social">
                 {{#if @site.facebook}}
                     <a class="social-item social-item-facebook" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -49,11 +47,6 @@
                     </a>
                 {{/if}}
             </div>
-            {{#if @member}}
-                <button class="button-text menu-item members-account" data-portal="account">Account</button>
-            {{else}}
-                <button class="button-text menu-item members-login" data-portal="signin">Login</button>
-            {{/if}}
         </div>
 
     </div>
@@ -61,28 +54,24 @@
 
     {{#is "home"}}
         {{> "cover"}}
-        {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
-        {{/if}}
     {{/is}}
 
     <div class="site-content">
         {{{body}}}
     </div>
 
+    {{^is "home"}}
     <footer class="gh-foot gh-outer">
         <div class="gh-foot-inner gh-inner">
             <div class="gh-copyright">
                 {{@site.title}} © {{date format="YYYY"}}
             </div>
-            <nav class="gh-foot-menu">
-                {{navigation type="secondary"}}
-            </nav>
             <div class="gh-powered-by">
                 <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
             </div>
         </div>
     </footer>
+    {{/is}}
 
 </div>
 

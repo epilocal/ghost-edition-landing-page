@@ -1,17 +1,12 @@
 {
-    "name": "edition",
-    "description": "A clean, minimal newsletter theme for the Ghost publishing platform",
+    "name": "edition-landing-page",
+    "description": "A clean, minimal landing page theme for the Ghost publishing platform",
     "version": "1.0.0",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
     },
     "license": "MIT",
-    "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
-    },
     "keywords": [
         "ghost",
         "theme",
